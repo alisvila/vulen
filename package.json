@@ -9,7 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.6",
     "axios": "^1.7.2",
+    "classnames": "^2.5.1",
     "for": "^0.0.1-dev.0",
     "formik": "^2.4.6",
     "install": "^0.13.0",
@@ -18,8 +20,11 @@
     "npm": "^10.8.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-query": "^3.39.3",
+    "react-redux": "^9.1.2",
     "react-toastify": "^10.0.5",
-    "yup": "^1.4.0"
+    "yup": "^1.4.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.6.0",
