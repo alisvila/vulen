@@ -4,7 +4,7 @@ type ActualTableProps = {
   content: any;
 };
 
-export default function ActualTable({ content }: ActualTableProps) {
+export default function  ActualTable({ content }: ActualTableProps) {
   const createHeader = () => {
     return (
       <tr>

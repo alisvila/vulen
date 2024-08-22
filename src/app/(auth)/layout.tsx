@@ -4,58 +4,29 @@ import Link from "next/link";
 import login from "@/public/assets/images/loginImage.svg";
 import infoIcon from "@/public/assets/images/icons/infoCircleIcon.svg";
 import headSetIcon from "@/public/assets/images/icons/headsetIcon.svg";
+import bird from './login-image.png'
 
 export default function AuthLayout({
-    children,
+  children,
 }: Readonly<{
-    children: React.ReactNode;
+  children: React.ReactNode;
 }>) {
-    return (
-        <main
-            className='w-full min-h-full md:h-full bg-login_bg flex flex-col justify-center
-                items-center relative'
-        >
-            <div
-                className='w-full md:w-5/6 max-w-6xl md:h-[85%] bg-gradient-to-b from-secondary to-primaryy
-                    z-10 rounded flex flex-col md:flex-row text-primaryy shadow-authLayout'
-            >
-                <div
-                    className='w-full md:w-49% md:h-full bg-white shadow-rightBgLayout rounded-e-xl rounded-s
-                        flex flex-col items-center gap-y-8 p-10'
-                >
-                    <h1 className='text-primaryy text-center text-lg mt-auto'>
-                        
-                    </h1>
-                    <div className='border-[0.03125rem] border-primaryy/[.25] rounded-xl w-full py-4 mb-auto'>
-                        {children}
-                    </div>
-                    <p className='text-xs text-center text-Neutral-500'>
-                 تمامی حقوق
-                    </p>
-                </div>
-                <div className='flex flex-col relative'>
-                    <div className='flex flex-row items-center justify-end gap-x-[0.5rem] px-7 pt-7'>
-                        <Link
-                            href={"/"}
-                            className='flex flex-row items-center text-white text-[0.8125rem]/[1.271875rem]
-                                gap-x-[0.5rem]'
-                        >
-                  
-                        </Link>
-                        <Link
-                            href={"/"}
-                            className='flex flex-row items-center text-white text-[0.8125rem]/[1.271875rem]
-                                gap-x-[0.5rem]'
-                        >
+  return (
+    <main className="relative flex min-h-full w-full flex-col items-center justify-center bg-gray-100 md:h-full">
+      <div className="shadow-lg border-2 border-indigo rounded-lg z-10 flex w-full max-w-6xl flex-col bg-white bg-gradient-to-b md:h-[85%] md:w-5/6 md:flex-row">
+        <div className="flex w-full  justify-around flex-col items-center gap-y-8 p-10 md:h-full">
+        <span className='font-medium text-xl'>ورود کاربران</span>
 
-                        </Link>
-                    </div>
-                    <div>
-
-                        
-                    </div>
-                </div>
-            </div>
-        </main>
-    );
+          {/* <h1 className="mt-auto text-center text-lg">پرنده ها</h1> */}
+          <div className="w-full py-4">
+            {children}
+          </div>
+          <p className="text-center text-xs">تمامی حقوق</p>
+        </div>
+        <div className="bg-indigo justify-around rounded-x-lg flex w-full flex-col items-center gap-y-8 p-10 md:h-full">
+            <Image src={bird} alt="its just a bird" />
+        </div>
+      </div>
+    </main>
+  );
 }

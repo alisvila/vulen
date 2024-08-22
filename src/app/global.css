@@ -7,8 +7,16 @@
 
 
 @layer base {
+  @font-face {
+    font-family: 'shab';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Shabnam.ttf) format('woff2');
+  }
+
   *{
-    font-family: IranSans;
+    font-family: shab;
   }
   :root {
     outline: none;

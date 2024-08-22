@@ -10,6 +10,7 @@ import CustomLabel from "../global/CustomLabel";
 import { fieldRequired } from "../global/validationMsgs";
 import { isRequiredField } from "../global/utils";
 import { signIn } from "next-auth/react";
+import bird from './login-image.png';
 // import { useRouter } from "next/router";
 
 export default function LoginForm() {
@@ -78,7 +79,7 @@ export default function LoginForm() {
                         placeholder='وارد کنید'
                         label={
                             <CustomLabel
-                                label='username'
+                                label='نام کاربری'
                                 name='certificate'
                                 requiredField={isRequiredField(
                                     SignupSchema,
@@ -104,7 +105,7 @@ export default function LoginForm() {
                     />
                     <CustomButton
                         block
-                        extraClass='bg-primaryy mt-3 h-10 rounded-[30px]'
+                        extraClass='bg-slate-500 text-white mt-3 h-10 rounded-lg'
                         text={<span>ورود</span>}
                     />
 

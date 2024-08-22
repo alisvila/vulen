@@ -1,6 +1,6 @@
 import React from "react";
 import Icon from "./icon";
-import { CheckBox } from "../checkbox";
+// import { CheckBox } from "../checkbox";
 
 type RowProps = {
   element: any;
@@ -33,7 +33,7 @@ export default function Row({ element, onRowClick, expanded, checked, onChecked 
               className="focus:text-primary active:text-primary flex items-center px-2 relative"
             >
                 <Icon onClick={() => {console.log(element.id);onRowClick(element.id)}} className={isExpanded(element.id) ? `rotate-90 absolute right-[-8px]` : 'absolute right-[-8px]'} />
-                <CheckBox element={element} checked={checked} onChecked={onChecked}/>
+                {/* <CheckBox element={element} checked={checked} onChecked={onChecked}/> */}
             </a>
             <ul
               className={isExpanded(element.id) ? "visible" : "hidden"}
@@ -65,7 +65,7 @@ export default function Row({ element, onRowClick, expanded, checked, onChecked 
         >
           {/* {element.id} */}
           <div className="focus:text-primary active:text-primary flex items-center px-2 relative">
-            <CheckBox checked={checked} title={element.id} onChecked={onChecked} element={element}/>
+            {/* <CheckBox checked={checked} title={element.id} onChecked={onChecked} element={element}/> */}
           </div>
         </li>
       );
