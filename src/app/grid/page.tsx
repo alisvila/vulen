@@ -7,8 +7,8 @@ import Search from "@/components/Grid/Search";
 import TableBadge from "@/components/Grid/TableBadge";
 import UpperHEaderTitle from "@/components/Grid/UpperHEader";
 import UpperHeaderBtn from "@/components/Grid/UpperHeaderBtn";
-import React, { Component } from "react";
-import { useSearchParams } from "next/navigation";
+import React, { Component, useEffect } from "react";
+import { useSearchParams, usePathname } from "next/navigation";
 import useGetAllSearchParams from "@/components/hooks/urlParams";
 
 const tableContent = [
@@ -33,8 +33,17 @@ const tableContent = [
     },
   },
 ];
+
 export default function TableExample() {
   const {setItem, getAll} = useGetAllSearchParams();
+  const searchParams = useSearchParams()
+  const pathName = usePathname()
+  
+  useEffect(() => {
+    const url = `${pathName}?${searchParams}`
+    // You can now use the current URL
+    // ...
+  }, [pathName, searchParams])
 
   return (
     <section className="container mx-auto px-4">
